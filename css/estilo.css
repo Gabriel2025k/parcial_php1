@@ -1,0 +1,276 @@
+:root {
+  --azul-principal: #1E3A8A;
+  --azul-oscuro: #142B66;
+  --azul-claro: #3B82F6;
+  --azul-suave: #EAF2FF;
+
+  --blanco: #FFFFFF;
+  --gris-claro: #F5F7FB;
+  --gris-borde: #D7E0F2;
+
+  --texto: #1F2937;
+  --texto-suave: #6B7280;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 40px 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--gris-claro);
+  color: var(--texto);
+}
+
+/* CONTENEDOR */
+.contenedor {
+  max-width: 760px;
+  margin: auto;
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: 12px;
+  padding: 48px 42px;
+  box-shadow: 0 12px 30px rgba(30, 58, 138, 0.12);
+  position: relative;
+}
+
+/* ETIQUETA SUPERIOR */
+.contenedor::before {
+  content: "iTECH · SISTEMA DE INSCRIPCIÓN";
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  background: var(--azul-principal);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.08em;
+}
+
+/* TITULO */
+h1 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--azul-principal);
+  margin-bottom: 6px;
+}
+
+/* FECHA */
+.fecha-formulario {
+  font-size: 12px;
+  color: var(--texto-suave);
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--gris-borde);
+  padding-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-top: 14px;
+  letter-spacing: 0.06em;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: 1.5px solid var(--gris-borde);
+  border-radius: 8px;
+  background: var(--blanco);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+/* FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--azul-claro);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder {
+  color: #9CA3AF;
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* SELECT */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%231E3A8A' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+}
+
+/* FIELDSET */
+fieldset.contacto {
+  border: 2px solid var(--azul-principal);
+  border-radius: 10px;
+  padding: 16px;
+  margin-top: 18px;
+  background: var(--azul-suave);
+}
+
+fieldset.contacto legend {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--azul-principal);
+  padding: 0 8px;
+  letter-spacing: 0.08em;
+}
+
+/* CHECKBOX */
+.checkbox-grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--gris-borde);
+  border-radius: 8px;
+  background: var(--gris-claro);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.checkbox-item:hover {
+  border-color: var(--azul-claro);
+  background: var(--azul-suave);
+}
+
+.checkbox-item input {
+  accent-color: var(--azul-principal);
+  width: 16px;
+  height: 16px;
+}
+
+/* BOTÓN */
+button[type="submit"] {
+  margin-top: 22px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--azul-principal), var(--azul-oscuro));
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(30, 58, 138, 0.25);
+}
+
+/* LINK */
+.enlace-reporte {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--azul-principal);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.enlace-reporte:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer-itech {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--texto-suave);
+}
+
+/* TABLA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+thead th {
+  background: var(--azul-principal);
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+tbody tr:hover {
+  background: var(--azul-suave);
+}
+
+/* BADGES */
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.badge.verde {
+  background: #e6f4ec;
+  color: #1f7a4a;
+}
+
+.badge.rojo {
+  background: #fde7e7;
+  color: #b42318;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contenedor {
+    padding: 28px 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
